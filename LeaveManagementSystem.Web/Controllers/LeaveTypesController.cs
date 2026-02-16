@@ -32,7 +32,7 @@ namespace LeaveManagementSystem.Web.Controllers
             {
                 return NotFound();
             }
-
+            // SELECT * FROM LeaveTypes WHERE Id = id
             var leaveType = await _context.LeaveTypes
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (leaveType == null)
